@@ -1,0 +1,10 @@
+# Function dependencies, for example:
+# package>=version
+
+google-auth
+google-cloud-storage
+datetime
+requests
+pandas
+numpy
+google-cloud-secret-manager==2.0.0
