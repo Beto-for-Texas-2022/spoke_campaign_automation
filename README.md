@@ -11,7 +11,7 @@ Before the Spoke API came out, we had already automated out the creation of cont
 
 You can quickly set-up and begin using the program to automate campaign production for daily lists with the following steps:
 
-\1.   Download the file spoke_campaign_automation.zip from GitHub.
+\ 1.   Download the file spoke_campaign_automation.zip from GitHub.
 
 \2.   Create a Pub/Sub trigger Google Cloud Function.
 
