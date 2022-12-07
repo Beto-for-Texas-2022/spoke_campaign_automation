@@ -19,7 +19,7 @@ def main(event, context):
 
     # input the name of the environmental variable which contains your service account json key
     # you can input this data in the secret manager tool and set it as an environmental variable in the cloud function during initial set-up of the cloud function
-    credentials = service_account.Credentials.from_service_account_info(json.loads(os.environ.get('DEMSDATA_SERVICE_ACCOUNT')))
+    credentials = service_account.Credentials.from_service_account_info(json.loads(os.environ.get('SERVICE_ACCOUNT')))
     client = storage.Client(project=project, credentials=credentials)
 
     # input the name of the environmental variable which contains your spoke api key

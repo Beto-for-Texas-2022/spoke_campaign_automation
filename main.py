@@ -17,7 +17,7 @@ def main(event, context):
 
     # input the name of the environmental variable which contains your service account json key
     credentials = service_account.Credentials.from_service_account_info(
-        json.loads(os.environ.get('DEMSDATA_SERVICE_ACCOUNT')))
+        json.loads(os.environ.get('SERVICE_ACCOUNT')))
     client = storage.Client(project=project, credentials=credentials)
 
     # input the name of the environmental variable which contains your spoke api key
