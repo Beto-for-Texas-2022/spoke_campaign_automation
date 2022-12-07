@@ -1,4 +1,4 @@
-# spoke_campaign_automation
+# SPOKE CAMPAIGN AUTOMATION
 Documentation and Python code for automation of texting campaigns in Spoke with Spoke API
 
 **Background / Problem Statement**
