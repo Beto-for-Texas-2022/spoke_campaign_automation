@@ -1,4 +1,4 @@
-# spoke_campaign_automation
+# SPOKE CAMPAIGN AUTOMATION
 Documentation and Python code for automation of texting campaigns in Spoke with Spoke API
 
 **Background / Problem Statement**
@@ -11,31 +11,31 @@ Before the Spoke API came out, we had already automated out the creation of cont
 
 You can quickly set-up and begin using the program to automate campaign production for daily lists with the following steps:
 
-\1.   Download the file spoke_campaign_automation.zip from GitHub.
+1.   Download the file spoke_campaign_automation.zip from GitHub.
 
-\2.   Create a Pub/Sub trigger Google Cloud Function.
+2.   Create a Pub/Sub trigger Google Cloud Function.
 
-\3.   Upload this file into a Google Cloud Function. There should be an option to upload a zip file.
+3.   Upload this file into a Google Cloud Function. There should be an option to upload a zip file.
 
-\4.   In Google Secret Manager, create two secrets.
+4.   In Google Secret Manager, create two secrets.
 
-a.   The first should contain the JSON key for your Google Cloud service account. This account should belong to the GCS bucket with your contact list csvs.
+* a.   The first should contain the JSON key for your Google Cloud service account. This account should belong to the GCS bucket with your contact list csvs.
 
-b.   The second should contain your Spoke API key.
+* b.   The second should contain your Spoke API key.
 
-\5.   Once the zip file has been uploaded, customize the following variables:
+5.   Once the zip file has been uploaded, customize the following variables:
 
-a.   In the program editor in GCF, change the project and bucket variables to the Google Cloud project you’re working out of and the name of the Google Cloud Storage where your contact lists are located, respectively.
+* a.   In the program editor in GCF, change the project and bucket variables to the Google Cloud project you’re working out of and the name of the Google Cloud Storage where your contact lists are located, respectively.
 
-**b.**   Under the **Runtime, build and connections settings** **header in the set-up page of the GCF, click security and** **Reference a secret****. Set your service account JSON key as an exposed environmental variable named ‘SERVICE_ACCOUNT’ and your Spoke API key as ‘SPOKE_API_KEY’.** 
+* b.   Under the **Runtime, build and connections settings **header in the set-up page of the GCF, click security and** **Reference a secret****. Set your service account JSON key as an exposed environmental variable named ‘SERVICE_ACCOUNT’ and your Spoke API key as ‘SPOKE_API_KEY’.
 
-c.   Edit the data in campaign_templates_data and gcs_object_names variables to match the template ID and name of your Spoke campaigns and the names of the csv files containing the contact list you’d like to upload. There are further instructions in the program itself.
+* c.   Edit the data in campaign_templates_data and gcs_object_names variables to match the template ID and name of your Spoke campaigns and the names of the csv files containing the contact list you’d like to upload. There are further instructions in the program itself.
 
-\6.   Deploy your function.
+6.   Deploy your function.
 
-\7.   Set up a Cloud Scheduler trigger attached to the GCF’s pub/sub topic.
+7.   Set up a Cloud Scheduler trigger attached to the GCF’s pub/sub topic.
 
-\8.   Done! You can check the [official Google documentation](https://cloud.google.com/functions/docs/create-deploy-gcloud-1st-gen) for further help.
+8.   Done! You can check the [official Google documentation](https://cloud.google.com/functions/docs/create-deploy-gcloud-1st-gen) for further help.
 
 **Additional Features**
 
