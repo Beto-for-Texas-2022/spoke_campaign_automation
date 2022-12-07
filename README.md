@@ -27,7 +27,7 @@ You can quickly set-up and begin using the program to automate campaign producti
 
 * a.   In the program editor in GCF, change the project and bucket variables to the Google Cloud project you’re working out of and the name of the Google Cloud Storage where your contact lists are located, respectively.
 
-* b.   Under the **Runtime, build and connections settings** **header in the set-up page of the GCF, click security and** **Reference a secret****. Set your service account JSON key as an exposed environmental variable named ‘SERVICE_ACCOUNT’ and your Spoke API key as ‘SPOKE_API_KEY’.** 
+* b.   Under the **Runtime, build and connections settings **header in the set-up page of the GCF, click security and** **Reference a secret****. Set your service account JSON key as an exposed environmental variable named ‘SERVICE_ACCOUNT’ and your Spoke API key as ‘SPOKE_API_KEY’.
 
 * c.   Edit the data in campaign_templates_data and gcs_object_names variables to match the template ID and name of your Spoke campaigns and the names of the csv files containing the contact list you’d like to upload. There are further instructions in the program itself.
 
