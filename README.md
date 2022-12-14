@@ -41,7 +41,18 @@ You can quickly set-up and begin using the program to automate campaign producti
 
 There is a second version of the main.py file called main_additional_features.py. This version contains heavily commented code which thoroughly explains how each step of the program works. It also contains code for additional features, such as modifying the program to only create and upload a campaign on a specific day of the week or a specific set of days. This version is intended to help a proficient Python coder edit the program to perform more complex things.
 
- 
+ **Spoke Troubleshooting**
+ If the program isn't working as you intended, there could be an issue on the Spoke side. The following are some tips to remember when working with Spoke:
+ * If your Spoke campaign will sync to VAN, you need a VanID column with the header spelled correctly in your list CSV. 
+ * If your script has variable fields in it, your list CSV needs to include columns for those fields. 
+ * Take note of your list size limits; automated list loading will fail if your list CSV is too large for the template campaign's Phone Number strategy. 
+ * When you initially deploy a Spokeinator system, test load some lists at or near your list size limit and take note of your list load time.
+ * If you ever need to change your standard Phone Number strategy, make sure to review your Template campaigns and update them before your next scheduled Spokeinator run. 
+ * If you never set up a Spoke => BigQuery sync, check in with the StW team about setting up a Google Cloud Service Account with the appropriate permissions before attempting to run the 'Load Contacts' API command. (And also, set up a Spoke => BigQuery sync! It's well worth it.) 
+
+
+
+
 
  
 
